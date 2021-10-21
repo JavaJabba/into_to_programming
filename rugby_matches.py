@@ -33,11 +33,9 @@ def get_players_age():
     player_name = input("Enter the name of player:\t")
     #Ask for number of days old and save as variable.
     days_old = int(input("The number of days old:\t"))
-    #Calculate number of years.
-    years_old = days_old / 365
-    years_only = ("%d" % years_old) - years_old
-    print(int(years_only))
+    
     
 
 #8395
 get_players_age()
+
