@@ -24,14 +24,14 @@ def main():
     # print(seasons(5))
     # print(seasons(3))
 
-    # print(grades(32))
-    # print(grades(20))
-    # print(grades(76))
-    # print(grades("hi"))
+    print(grades(32))
+    print(grades(20))
+    print(grades(76))
+    print(grades("hi"))
 
-    print(equal_numbers(25,25))
-    print(equal_numbers(2,3))
-    print(equal_numbers(2,"hi"))
+    # print(equal_numbers(25,25))
+    # print(equal_numbers(2,3))
+    # print(equal_numbers(2,"hi"))
 
 if __name__ == "__main__":
     ''' call the main() function in this file '''
