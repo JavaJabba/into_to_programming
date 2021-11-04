@@ -45,51 +45,34 @@ def grades(number):
 
     '''
     try:
-        if number == str:
-            if number == "A":
-                return
-        elif number == int:
-            if 85<= number <=100:
-                return "A"
+        if number == str and number == "A":
+            return "85-100"
+        elif number == str and number == "B":
+            return "70-84"
+        elif number == str and number == "C":
+            return "55-69"
+        elif number == str and number == "D":
+            return "40-54"
+        elif number == str and number == "E":
+            return "25-39"
+        elif number == str and number == "F":
+            return "85-100"                        
+        elif number == int and 85<= number <=100:
+            return "A"
+        elif number == int and 70<= number <=84:
+            return "B"
+        elif number == int and 55<= number <=69:
+            return "C"
+        elif number == int and 40<= number <=54:
+            return "D"
+        elif number == int and 25<= number <=39:
+           return "E"
+        elif number == int and 0<= number <=24:
+            return "F"
     except:
-        if 0 > number > 100:
+        if number == int and 0 > number > 100:
             return "The input numerical grade is outside the range supported"
         elif number != int or number != str:
             return "Input value must be a number or a letter"
-        elif number != ("A" or "B" or "C" or "D" or "E" or "F"):
+        elif number == str and number != ("A" or "B" or "C" or "D" or "E" or "F"):
             return "The input letter grade is outside the range supported"
-
-    
-
-    if number == str:
-        if number == "A":
-            return
-    elif number == int:
-        if 85<= number <=100:
-            return "A"
-
-
-                if 85<= number <=100:
-            return "A"
-        elif number == "A":
-            return "85-100"
-        elif 70<= number <=84:
-            return "B"
-        elif number == "B":
-            return "70-84"
-        elif 55<= number <=69:
-            return "C"
-        elif number == "C":
-            return "55-69"
-        elif 40<= number <=54:
-            return "D"
-        elif number == "D":
-            return "40-54"
-        elif 25<= number <=39:
-            return "E"
-        elif number == "E":
-            return "25-39"
-        elif 0<= number <=24:
-            return "F"
-        elif number == "F":
-            return "85-100"
