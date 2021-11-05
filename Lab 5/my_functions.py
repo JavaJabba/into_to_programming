@@ -20,10 +20,14 @@ def fizz_buzz(num1, divisor_1 = 3, divisor_2 = 5):
         - For multiples of divisor_1 the function return “Fizz”. 
         - For multiples of divisor_2, return “Buzz”. 
         - For numbers which are multiples of both divisor_1 and divisor_2 return “FizzBuzz”. 
+     4. 
+     - For fizz_buzz(), I want you to add error handling (exception handling) to catch those casting issues, 
+        or non-type issue, and use this to return the error message, 
+        'Input value(s) must be a number',for thefunction.
     '''
     
     try:
-
+        #modified to include divisor variables with default value in case only one value is entered.
         if num1 % divisor_1 == 0 and num1 % divisor_2 == 0:
             return "FizzBuzz"
         elif num1 % divisor_1 == 0:
@@ -45,34 +49,40 @@ def grades(number):
 
     '''
     try:
-        if number == str and number == "A":
-            return "85-100"
-        elif number == str and number == "B":
-            return "70-84"
-        elif number == str and number == "C":
-            return "55-69"
-        elif number == str and number == "D":
-            return "40-54"
-        elif number == str and number == "E":
-            return "25-39"
-        elif number == str and number == "F":
-            return "85-100"                        
-        elif number == int and 85<= number <=100:
-            return "A"
-        elif number == int and 70<= number <=84:
-            return "B"
-        elif number == int and 55<= number <=69:
-            return "C"
-        elif number == int and 40<= number <=54:
-            return "D"
-        elif number == int and 25<= number <=39:
-           return "E"
-        elif number == int and 0<= number <=24:
-            return "F"
-    except:
-        if number == int and 0 > number > 100:
+        #first determine if input is str or int, then if either is true then determine return result.
+        if type(number) == str:
+            if number == "A":
+                return "85-100"
+            elif number == "B":
+                return "70-84"
+            elif number == "C":
+                return "55-69"
+            elif number == "D":
+                return "40-54"
+            elif number == "E":
+                return "25-39"
+            elif number == "F":
+                return "85-100"                        
+        elif type(number) == int:
+            if 85<= number <=100:
+                return "A"
+            elif 70<= number <=84:
+                return "B"
+            elif 55<= number <=69:
+                return "C"
+            elif 40<= number <=54:
+                return "D"
+            elif 25<= number <=39:
+                return "E"
+            elif 0<= number <=24:
+                return "F"
+    #could not get the error handling to work with multiple errors in the except. More explanation on how to do this would be appreciated.
+    except ValueError:
+        if 0 > number > 100:
             return "The input numerical grade is outside the range supported"
-        elif number != int or number != str:
+    except TypeError:
+        if type(number) != int or type(number) != str:
             return "Input value must be a number or a letter"
-        elif number == str and number != ("A" or "B" or "C" or "D" or "E" or "F"):
+    except ValueError:    
+        if type(number) == str and number != ("A" or "B" or "C" or "D" or "E" or "F"):
             return "The input letter grade is outside the range supported"
