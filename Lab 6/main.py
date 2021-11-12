@@ -30,12 +30,19 @@ def main():
     # print(slice_reverse("abcdba"))                                 
     # print(slice_reverse(11.11))
 
-    print(add_to_list(5, [1,3,7,9]))
-    print(add_to_list("c", ["a","b","d","e"]))
-    print(add_to_list(5, [1,5,7,9]))
-    print(add_to_list(5))
-    print(add_to_list(5, 5))
-    print(add_to_list(5, ["a","d","e"]))
+    # print(add_to_list(5, [1,3,7,9]))
+    # print(add_to_list("c", ["a","b","d","e"]))
+    # print(add_to_list(5, [1,5,7,9]))
+    # print(add_to_list(5))
+    # print(add_to_list(5, 5))
+    # print(add_to_list(5, ["a","d","e"]))
+
+    print(add_to_list_no_sort(5, [1,3,7,9]))
+    print(add_to_list_no_sort("c", ["a","b","d","e"]))
+    print(add_to_list_no_sort(5, [1,5,7,9]))
+    print(add_to_list_no_sort(5))
+    print(add_to_list_no_sort(5, 5))
+    print(add_to_list_no_sort(5, ["a","d","e"]))
 
 if __name__ == "__main__":
     ''' call the main() function in this file '''
