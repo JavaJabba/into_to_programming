@@ -63,6 +63,7 @@ def add_to_list_no_sort(value, list=[]):
     - In this function, you cannot use the python function “sort()” to sort your returning list. 
     - But you can now mix ints, floats and strings. If mixing ints, floats and strings, use ASCII values for strings when comparing. 
     '''
+    #couldnt get this function to work and ran out of time. 
     try:
         i = 0
         while i <= len(list):
@@ -70,7 +71,7 @@ def add_to_list_no_sort(value, list=[]):
                 if value > list[i]:
                     i =+ 1
                     if value < list[i]:
-                        i = i-1
+                        i =- 1
                         list.insert(i, value)
             elif value in list:
                 return list
