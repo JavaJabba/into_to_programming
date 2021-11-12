@@ -67,10 +67,11 @@ def add_to_list_no_sort(value, list=[]):
         i = 0
         while i <= len(list):
             if value not in list:
-                if value < list[i]:
-                    value = list[i-1]
+                if value > list[i]:
                     i =+ 1
-                    return list
+                    if value < list[i]:
+                        i = i-1
+                        list.insert(i, value)
             elif value in list:
                 return list
     except:      
