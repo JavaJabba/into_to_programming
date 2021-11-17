@@ -99,3 +99,28 @@ def func_name (param1):
 #     i += 1
 # print()
 
+
+
+#list bug fix
+# def add_to_list(value, alist:list=[]) -> list:
+#     alist.append(value)
+#     return alist
+
+# def add_to_list(value, alist = None) -> list:
+#     if alist == None:
+#         alist = []
+#     alist.append(value)
+#     return alist
+
+i=0
+alist = [5,6,7,8,9]
+while i < len(alist):
+    print("index:", i, " - value:", alist[i])
+    i += 1
+
+# i = len(alist)-1
+# while i >= 0:
+#     print("index:", i, " - value:", alist[i])
+#     i -= 1
+
+
