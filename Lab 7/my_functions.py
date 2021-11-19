@@ -130,6 +130,7 @@ def remove(value, my_list):
     g. remove(value, my_list) - function to return a list with the first occurrence of value removed from my_list
         i. remove("h", "hello") -> "ello"
     '''
+    #Again it's the last question that trips me up could get "i" to increment correctly.
     try:
         i = 0
         while i <= len(my_list):
@@ -138,7 +139,9 @@ def remove(value, my_list):
                 second_half = my_list[i+1:]
                 my_list = first_half + second_half
                 return my_list
-            i =+ 1
+            elif my_list[i] != value:
+                i =+ 1
+                return my_list
     except:
         return "houston, we have a problem!"
 
