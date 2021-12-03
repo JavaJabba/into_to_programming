@@ -3,26 +3,6 @@
 
 import random
 
-def is_stairs(s):
-    '''
-    a. A stairs is a list of at least two numbers where either: 
-            i. each number is one greater than the previous number or 
-            ii. each number is one smaller than the previous number 
-            iii. but always going in the one direction – always up or always down. 
-            iv. Write a Python function is_stairs( s ) to test if the numeric list s is a stairs. 
-            v. is_stairs ( [ 2, 3, 4, 5 ] ) and is_stairs ( [ 8, 7, 6 ] ) both return TRUE 
-               is_stairs ( [ 2, 3, 5 ] ), is_stairs ( [ 2, 3, 2 ] ), and is_stairs ( [ 4 ] ) all 
-               return False. (These are booleans and not strings) 
-    '''    
-
-    for i in range(len(s)):
-        if [i] >= [i-1] or [i] <= [i-1]:
-            continue
-        elif not [i] >= [i-1] or not [i] <= [i-1]:
-            return False
-        else:
-            return True
-
 def while_loop(max_number=10):
     '''
     Write  a  function,  while_loop(max_number),  that  contains  a  while  loop  that  loops 
@@ -118,4 +98,29 @@ def magic_8_ball(my_question, fixed_list=[]):
     except:
         return "I have spoken."
         
-            
+def all_pairs(s1, s2):
+    '''
+    Create a function called - all_pairs( s1, s2 ) with 2 parameters called:
+    s1 - list/string    s2 - list/string
+    which creates a list with all pairs of elements from sequences ‘s1’ and ‘s2’
+    this all_pairs function returns two values:
+    the first is a boolean to tell if an exception occurred
+    the second is output of the function, if no exception occurred,
+    or [-1] if an exception occurred
+    '''
+    #try and except to catch exceptions and return the required [-1].
+    try:
+        #initialise list.
+        paired_list = []
+        #for each item in s1.
+        for i1 in s1:
+            #get each item in s2.
+            for i2 in s2:
+                #cast to string and concat each value.
+                pair = str(i1) + str(i2)
+                #add pair to list.
+                paired_list.append(pair)
+        #return False as try except catches exceptions and also return the paired list.
+        return False, paired_list
+    except:
+        return [-1]    

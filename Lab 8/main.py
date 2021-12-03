@@ -21,6 +21,11 @@ def main():
     # print(magic_8_ball("Will I be rich!"))
     # print(magic_8_ball("Will I be rich!", [0, 3, 8]))
     # print(magic_8_ball("Will I be rich!", [0, 3, 8, -1, 2]))
+    print(all_pairs([1,2], "abc"))
+    print(all_pairs([], ""))
+    print(all_pairs(["abc"] , [1,2]))
+    print(all_pairs(["a", "b"], "abc"))
+    print(all_pairs([1,"a"], 2))
 
 
 if __name__ == "__main__":
