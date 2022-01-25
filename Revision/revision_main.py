@@ -14,7 +14,8 @@ def main():
     """
     Call the functions defined in the functions.py file
     """
-    print(calcWindChillIndex(27, 2))
+    # print(calcWindChillIndex(27, 2))
+    print(bottlesOfBeer(99))
 
 if __name__ == "__main__":
     ''' call the main() function in this file '''
