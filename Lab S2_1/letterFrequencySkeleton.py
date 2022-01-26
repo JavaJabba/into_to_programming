@@ -48,7 +48,18 @@ To sit on my throne as the Prince of Bel Air"""
 
 freq = {} 
 
-def analyse (englishtext):
+def analyse (englishText):
     #Your code goes here
+    i = 0
+    while i < len(englishText):
+        letter = englishText[i]
+        letter = letter.upper()
+        if letter not in freq:
+            freq[letter] = 1
+            i += 1
+        elif letter in freq:
+            freq[letter] += 1
+            i += 1
+    return freq 
 
-analyse (text)
+print(analyse(text))
