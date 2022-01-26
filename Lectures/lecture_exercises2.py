@@ -15,3 +15,4 @@ for index in range(len(name)):
 #type 3: get both item and index
 for index, letter in enumerate(name):
     print(index, letter)
+
