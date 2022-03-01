@@ -43,8 +43,19 @@ def isValidMove(board, row, col):
     return
 
 def solveBoard(b, col):
-    # see pseudocode above. 
-    return
+    #Base Case
+    if col == n: #If successful solved
+        return b, True
+    for row in range(n):
+        if isValidMove(b, row, col) == True:    
+            b[row][col] = 1 #Place the Queen
+            #Recursive Case
+            b, answer = solveBoard(b, col+1)
+            if answer == True:
+                return b, True
+            b[row][col] = 0
+
+    return b, False
 
 
 def printBoard(SBoard):
@@ -59,11 +70,11 @@ n = int(input("What is the width of the board?"))
 
 board = createBoard(n)
 
-# solvedBoard, result = solveBoard(board, 0)	#pass in the empty board (matrix) and the column to start at i.e. the first column with index 0
+solvedBoard, result = solveBoard(board, 0)	#pass in the empty board (matrix) and the column to start at i.e. the first column with index 0
 
-# if result == False:
-#     print("Solution does not exist")
-# else:
-#     printBoard(solvedBoard)
+if result == False:
+    print("Solution does not exist")
+else:
+    printBoard(solvedBoard)
 
 print(board)
