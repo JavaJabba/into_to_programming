@@ -110,36 +110,40 @@ d) The lowest overall score.
 
 Write the answers from parts a, c and d above to a file called analysis.txt. 
 '''
-answer_key  = ['B','A','D','D','C','B','D','A','C','C','D','B','A','B','A','C','B','D','A','C','A','A','B','D','D'] 
+# answer_key  = ['B','A','D','D','C','B','D','A','C','C','D','B','A','B','A','C','B','D','A','C','A','A','B','D','D'] 
 
-inFile = open("students.txt", "r")
-outFile = open("analysis.txt", "w")
+# inFile = open("students.txt", "r")
+# outFile = open("analysis.txt", "w")
 
-students = inFile.readlines()
-studentScores = []
-for student in students:
-    student = student.strip("\n")
-    student = student.split(",")
-    studentID = student[0]
-    studentAnswers = student[1:]
-    studentScore = 0
-    for answerPos in  range(len(studentAnswers)):
-        if studentAnswers[answerPos] == answer_key[answerPos]:
-            studentScore += 4
-    studentScores.append(studentScore) #grade for every student
+# students = inFile.readlines()
+# studentScores = []
+# for student in students:
+#     student = student.strip("\n")
+#     student = student.split(",")
+#     studentID = student[0]
+#     studentAnswers = student[1:]
+#     studentScore = 0
+#     for answerPos in  range(len(studentAnswers)):
+#         if studentAnswers[answerPos] == answer_key[answerPos]:
+#             studentScore += 4
+#     studentScores.append(studentScore) #grade for every student
 
-#total number of students
-numStudents = len(studentScores)
-outFile.write("The number of students is %s" % numStudents)
+# #total number of students
+# numStudents = len(studentScores)
+# outFile.write("The number of students is %s" % numStudents)
 
-#highest score
-maxScore = max(studentScores)
-outFile.write("The Maximum Score is %s" % maxScore)
+# #highest score
+# maxScore = max(studentScores)
+# outFile.write("The Maximum Score is %s" % maxScore)
 
-#lowest score
-lowScore = min(studentScores)
-outFile.write("The Lowest Score is %s" % lowScore)
+# #lowest score
+# lowScore = min(studentScores)
+# outFile.write("The Lowest Score is %s" % lowScore)
 
 
-inFile.close()
-outFile.close()
+# inFile.close()
+# outFile.close()
+
+'''
+
+'''
